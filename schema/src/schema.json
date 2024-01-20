@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "types": "object",
+  "required": [
+    "types"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "types": {
+      "type": "array"
+    },
+    "scopes": {
+      "type": "array"
+    },
+    "titleFormat": {
+      "type": "string"
+    },
+    "branchNameFormat": {
+      "type": "string"
+    }
+  }
+}

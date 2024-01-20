@@ -1,0 +1,16 @@
+{
+  "$schema": "../src/schema.json",
+  "types": [
+    "feat",
+    "fix",
+    "docs",
+    "style",
+    "refactor"
+  ],
+  "scopes": [
+    "app",
+    "server",
+    "test"
+  ],
+  "titleFormat": "${type}(${scope}): .+ ${mr} ${issues}"
+}
