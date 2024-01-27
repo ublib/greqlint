@@ -1,8 +1,9 @@
+use loader::load;
 use std::path;
 
-use loader::load;
-
+mod linter;
 mod loader;
+mod normalizer;
 
 fn main() {
     // TODO: path
