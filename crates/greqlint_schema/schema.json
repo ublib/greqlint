@@ -7,7 +7,7 @@
     "types"
   ],
   "properties": {
-    "branch_name_format": {
+    "branchNameFormat": {
       "type": [
         "string",
         "null"
@@ -25,7 +25,8 @@
     "provider": {
       "$ref": "#/definitions/Provider"
     },
-    "title_format": {
+    "titleFormat": {
+      "description": "available variables: ${type} ${scope} ${mr} ${issues}",
       "type": [
         "string",
         "null"
