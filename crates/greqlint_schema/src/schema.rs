@@ -12,13 +12,17 @@ pub struct Schema {
 
 #[derive(Deserialize, Serialize, JsonSchema, Debug)]
 pub enum Provider {
-    GitHub,
-    GitLab,
+    #[serde(rename = "github-actions")]
+    GitHubActions,
+    #[serde(rename = "gitlab-runner")]
+    GitLabRunner,
+    #[serde(rename = "type")]
     Custom,
 }
 
 #[derive(Deserialize, Serialize, JsonSchema, Debug)]
 pub struct CommitType {
+    #[serde(rename = "type")]
     pub type_name: String,
     pub scopes: Option<Vec<String>>,
 }

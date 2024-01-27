@@ -1,6 +1,6 @@
 {
   "$schema": "../../schema.json",
-  "provider": "GitLab",
+  "provider": "gitlab-runner",
   "common_scopes": [
     "app",
     "server",
@@ -8,7 +8,7 @@
   ],
   "types": [
     {
-      "type_name": "feat",
+      "type": "feat",
       "scopes": [
         "entity",
         "useCase",
@@ -17,16 +17,16 @@
       ]
     },
     {
-      "type_name": "fix"
+      "type": "fix"
     },
     {
-      "type_name": "docs"
+      "type": "docs"
     },
     {
-      "type_name": "style"
+      "type": "style"
     },
     {
-      "type_name": "refactor"
+      "type": "refactor"
     }
   ],
   "titleFormat": "${type}(${scope}): .+ ${mr} ${issues}"

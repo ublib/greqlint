@@ -42,7 +42,7 @@
     "CommitType": {
       "type": "object",
       "required": [
-        "type_name"
+        "type"
       ],
       "properties": {
         "scopes": {
@@ -54,7 +54,7 @@
             "type": "string"
           }
         },
-        "type_name": {
+        "type": {
           "type": "string"
         }
       }
@@ -62,9 +62,9 @@
     "Provider": {
       "type": "string",
       "enum": [
-        "GitHub",
-        "GitLab",
-        "Custom"
+        "github-actions",
+        "gitlab-runner",
+        "type"
       ]
     }
   }
