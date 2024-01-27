@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema",
+  "type": "object",
+  "required": [
+    "provider",
+    "types"
+  ],
+  "properties": {
+    "branch_name_format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "common_scopes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "provider": {
+      "$ref": "#/definitions/Provider"
+    },
+    "title_format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CommitType"
+      }
+    }
+  },
+  "definitions": {
+    "CommitType": {
+      "type": "object",
+      "required": [
+        "type_name"
+      ],
+      "properties": {
+        "scopes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "type_name": {
+          "type": "string"
+        }
+      }
+    },
+    "Provider": {
+      "type": "string",
+      "enum": [
+        "GitHub",
+        "GitLab",
+        "Custom"
+      ]
+    }
+  }
+}

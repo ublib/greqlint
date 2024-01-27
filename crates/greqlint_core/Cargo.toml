@@ -1,5 +1,5 @@
 [package]
-name = "core"
+name = "greqlint_core"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,3 +9,4 @@ edition = "2021"
 serde = "*"
 serde_json = "*"
 schemars = "*"
+greqlint_schema = { path = "../greqlint_schema" }
