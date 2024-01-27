@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema.json",
+  "provider": "GitLab",
+  "common_scopes": [
+    "app",
+    "server",
+    "test"
+  ],
+  "types": [
+    {
+      "type_name": "feat",
+      "scopes": [
+        "entity",
+        "useCase",
+        "presentation",
+        "infra"
+      ]
+    },
+    {
+      "type_name": "fix"
+    },
+    {
+      "type_name": "docs"
+    },
+    {
+      "type_name": "style"
+    },
+    {
+      "type_name": "refactor"
+    }
+  ],
+  "titleFormat": "${type}(${scope}): .+ ${mr} ${issues}"
+}
