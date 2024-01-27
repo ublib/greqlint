@@ -1,4 +1,4 @@
-use schemars::schema::Schema;
+use greqlint_schema::schema::Schema;
 use serde_json::from_str;
 
 pub fn load(path: &str) -> Result<Schema, Box<dyn std::error::Error>> {

@@ -12,6 +12,7 @@ checksum = "545b22097d44f8a9581187cdf93de7a71e4722bf51200cfaba810865b49a495d"
 name = "greqlint_core"
 version = "0.1.0"
 dependencies = [
+ "greqlint_schema",
  "schemars",
  "serde",
  "serde_json",
@@ -21,7 +22,6 @@ dependencies = [
 name = "greqlint_schema"
 version = "0.1.0"
 dependencies = [
- "greqlint_core",
  "schemars",
  "serde",
  "serde_json",

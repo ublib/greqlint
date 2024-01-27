@@ -9,3 +9,4 @@ edition = "2021"
 serde = "*"
 serde_json = "*"
 schemars = "*"
+greqlint_schema = { path = "../greqlint_schema" }
