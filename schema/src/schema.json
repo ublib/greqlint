@@ -12,6 +12,14 @@
     "$schema": {
       "type": "string"
     },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "github",
+        "gitlab",
+        "custom"
+      ]
+    },
     "types": {
       "type": "array"
     },

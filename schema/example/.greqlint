@@ -1,5 +1,6 @@
 {
   "$schema": "../src/schema.json",
+  "provider": "gitlab",
   "types": [
     "feat",
     "fix",
