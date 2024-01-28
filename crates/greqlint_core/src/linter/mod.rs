@@ -1,3 +1,3 @@
 mod branch;
-mod parser_common;
+mod parser;
 mod title;

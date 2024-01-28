@@ -3,7 +3,4 @@
     "greqlint",
     "schemars"
   ],
-  "rust-analyzer.linkedProjects": [
-    "./crates/core/Cargo.toml"
-  ]
 }

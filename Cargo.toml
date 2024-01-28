@@ -1,1 +1,2 @@
-workspace = {  members = ["crates/greqlint_core", "crates/greqlint_schema"] }
+[workspace]
+members = ["crates/*"]
