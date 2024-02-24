@@ -10,3 +10,4 @@ serde = "*"
 serde_json = "*"
 schemars = "*"
 greqlint_schema = { path = "../greqlint_schema" }
+regex = "1.10.2"

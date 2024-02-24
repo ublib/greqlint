@@ -3,8 +3,12 @@ use self::{
     reader::Reader,
 };
 
-mod ast;
+pub mod ast;
 mod reader;
+
+pub fn parse(input: &str) -> Result<Root, String> {
+    Parser::new(input).parse()
+}
 
 pub struct Parser<'a> {
     source: &'a str,

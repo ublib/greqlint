@@ -4,6 +4,8 @@ use std::path;
 mod linter;
 mod loader;
 mod normalizer;
+mod parser;
+mod regex_generator;
 
 fn main() {
     // TODO: path
