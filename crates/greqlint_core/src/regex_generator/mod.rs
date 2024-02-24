@@ -1,10 +1,16 @@
 use crate::parser::ast::{Root, RuleNode};
+use regex::Regex;
 
 const ESCAPE_KEYWORDS: [char; 2] = ['(', ')'];
 
-pub fn gen_regex(ast: Root) -> String {
+pub fn gen_regex(ast: &Root) -> Regex {
+    let result = gen_regex_str(ast);
+    Regex::new(&result).unwrap()
+}
+
+fn gen_regex_str(ast: &Root) -> String {
     let mut result = String::new();
-    for node in ast.body {
+    for node in ast.body.clone() {
         match node {
             RuleNode::Variable(var) => {
                 result.push_str(&format!("(?<{}>.+)", var.name));
@@ -64,10 +70,10 @@ mod test {
             ],
         };
 
-        let re = gen_regex(ast);
+        let re = gen_regex_str(&ast);
         assert_eq!(re, r#"(?<type>.+)\((?<scope>.+)\): .+"#);
 
-        let re = Regex::new(&re).unwrap();
+        let re = gen_regex(&ast);
         let caps = re.captures("feat(scope): message").unwrap();
         assert_eq!(caps.name("type").unwrap().as_str(), "feat");
     }

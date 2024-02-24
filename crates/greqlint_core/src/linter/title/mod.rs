@@ -3,7 +3,7 @@ use crate::{normalizer::Issue, parser, regex_generator::gen_regex};
 use super::super::parser::ast::Root;
 use greqlint_schema::schema::{CommitType, Schema};
 
-use regex::{Captures, Regex};
+use regex::Captures;
 
 struct Variables<'a> {
     pub types: &'a Vec<CommitType>,
@@ -35,10 +35,7 @@ pub fn lint_title(schema: &Schema, issues: &Vec<Issue>, title: &str) -> Result<(
 }
 
 fn capture<'a>(ast: Root<'a>, title: &'a str) -> Result<Captures<'a>, String> {
-    let title_re = gen_regex(ast);
-    let Ok(re) = Regex::new(&title_re) else {
-        return Err("Invalid title regexp".to_string());
-    };
+    let re = gen_regex(&ast);
     let Some(cap) = re.captures(title) else {
         return Err("Invalid title regexp".to_string());
     };
