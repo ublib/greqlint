@@ -1,2 +1,2 @@
-mod branch;
-mod title;
+pub mod branch;
+pub mod title;
