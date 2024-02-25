@@ -29,5 +29,5 @@
       "type": "refactor"
     }
   ],
-  "titleFormat": "${type}(${scope}): .+ ${mr} ${issues}"
+  "titleFormat": "${type}(${scope}): .+"
 }

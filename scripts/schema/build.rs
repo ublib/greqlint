@@ -1,5 +1,14 @@
-mod schema;
-use crate::schema::Schema;
+#!/usr/bin/env rust-script
+
+//! ```cargo
+//! [dependencies]
+//! serde = "*"
+//! serde_json = "*"
+//! schemars = "*"
+//! greqlint_schema = { path = "../../crates/greqlint_schema" }
+//! ```
+
+use greqlint_schema::schema::Schema;
 
 use schemars::schema_for;
 use serde_json::to_writer_pretty;
