@@ -1,3 +1,6 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
+
 pub struct Reader<'a> {
     source: &'a str,
     pub pos: usize,

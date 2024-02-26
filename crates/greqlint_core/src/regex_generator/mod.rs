@@ -1,3 +1,6 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
+
 use crate::parser::ast::{Root, RuleNode};
 use regex::Regex;
 
